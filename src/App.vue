@@ -12,6 +12,8 @@ import URLForm from "./components/URLForm.vue";
 import ResultContainer from "./components/ResultContainer.vue";
 import GithubLink from "./components/GithubLink.vue";
 
+// TODO: add animations with framer
+
 const fetchFn = async (longUrl: string) => {
   const response = await fetch("https://io.up.railway.app/links/shorten", {
     method: "POST",
