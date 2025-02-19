@@ -8,7 +8,7 @@ import { cn } from "./lib/utils";
 
 const props = defineProps<{ class: HtmlHTMLAttributes["class"] }>();
 
-const mode = useColorMode();
+const mode = useColorMode({ disableTransition: false });
 
 if (localStorage.getItem("vueuse-color-scheme") === "auto") {
   mode.value = "dark";

@@ -10,6 +10,7 @@ import { toast } from "vue-sonner";
 import Layout from "./Layout.vue";
 import URLForm from "./components/URLForm.vue";
 import ResultContainer from "./components/ResultContainer.vue";
+import GithubLink from "./components/GithubLink.vue";
 
 const fetchFn = async (longUrl: string) => {
   const response = await fetch("https://io.up.railway.app/links/shorten", {
@@ -71,7 +72,7 @@ const onSubmit = async (e: Event) => {
             )
           "
         >
-          {{ "Shorten Your Long Links :)" }}
+          Shorten Your Looooong Links :)
         </h1>
 
         <p class="font-light max-w-xl text-secondary-foreground text-center">
@@ -81,10 +82,20 @@ const onSubmit = async (e: Event) => {
       </div>
       <div class="pt-10 w-full">
         <URLForm :is-loading="loading" @submit="onSubmit" />
-
         <ResultContainer v-if="data" :data="data" />
       </div>
     </main>
-    <footer class="px-12 py-5">About me</footer>
+    <footer class="px-12 py-5 flex items-center justify-between">
+      <a
+        href="https://github.com/Junk-debug"
+        :class="
+          cn('text-muted-foreground text-xs hover:scale-125', twGradientStyles)
+        "
+      >
+        &copy; 2025 Junk-debug
+      </a>
+
+      <GithubLink />
+    </footer>
   </Layout>
 </template>

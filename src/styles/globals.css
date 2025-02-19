@@ -21,7 +21,7 @@
 
 @layer base {
   * {
-    @apply border-border transition-colors;
+    @apply border-border transition-all;
   }
   body {
     @apply bg-background text-foreground font-geist;
