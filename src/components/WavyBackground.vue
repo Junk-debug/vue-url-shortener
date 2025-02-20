@@ -4,7 +4,7 @@
       id="canvas"
       ref="canvasRef"
       class="absolute z-0"
-      :style="{ filter: isSafari ? `blur(${props.blur - sm}px)` : undefined }"
+      :style="{ filter: isSafari ? `blur(${props.blur}px)` : undefined }"
     ></canvas>
     <div :class="cn('relative z-10', props.class)">
       <slot />
