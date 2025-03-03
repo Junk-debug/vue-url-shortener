@@ -15,7 +15,7 @@ import GithubLink from "./components/GithubLink.vue";
 // TODO: add animations with framer
 
 const fetchFn = async (longUrl: string) => {
-  const response = await fetch("https://io.up.railway.app/links/shorten", {
+  const response = await fetch("https://io.up.railway.app/links", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
