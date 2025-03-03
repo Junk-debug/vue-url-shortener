@@ -39,7 +39,7 @@ const url = ref("");
         :disabled="loading"
         type="url"
         placeholder="https://example.com/very?long=true&short=false"
-        class="pl-14 sm:pr-36 pr-16 caret-[hsl(var(--primary-pink))]"
+        class="pl-14 sm:pr-36 pr-16 caret-primary-pink"
       />
 
       <Button
